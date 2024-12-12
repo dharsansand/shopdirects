@@ -1,7 +1,9 @@
 import React from 'react';
 // Import the StateContext provider
 // Adjust the import path if necessary
-import './globals.css'; // Your global CSS file
+import './globals.css';
+import { StateContext } from '@/context/StateContext';
+// Your global CSS file
 
 export const metadata = {
   title: 'Next.js',
@@ -16,7 +18,9 @@ export default function RootLayout({ children }) {
       </head>
       
       <body>
+        <StateContext>
         {children}
+        </StateContext>
       </body>
     </html>
   );
