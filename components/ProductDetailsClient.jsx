@@ -9,13 +9,14 @@ import {  urlFor } from '@/lib/client';
 const ProductDetailsClient = ({ product }) => {
     const { decQty, incQty, qty, onAdd,setShowCart } = useStateContext();
     const [index, setIndex] = useState(0);
+    const handleBuyNow = () => {
+      onAdd(product, qty);
+  
+      setShowCart(true);
+    }
   
   const { image, name, details, price } = product;
-  const handleBuyNow = () => {
-    onAdd(product, qty);
-
-    setShowCart(true);
-  }
+  
 
 
   return (

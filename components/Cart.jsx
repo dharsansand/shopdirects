@@ -6,6 +6,10 @@ import { TiDeleteOutline } from 'react-icons/ti';
 
 import { useStateContext } from '@/context/StateContext'; 
 import {urlFor} from '@/lib/client'
+import { loadStripe } from '@stripe/stripe-js';
+
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 
 
 
@@ -13,7 +17,22 @@ const Cart=()=>{
     const cartRef = useRef();
     const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
+    const handleCheckout = async () => {
     
+    
+      const response = await fetch('/api/stripe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({cartItems}),
+      });
+    
+      const data = await response.json();
+      if (data.url) {
+        window.location.href = data.url; // Redirect to Stripe Checkout
+      } else {
+        console.error('Error:', data.error);
+      }
+    };
     
   
    
@@ -83,7 +102,7 @@ const Cart=()=>{
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick="">
+              <button type="button" className="btn" onClick={handleCheckout}>
                 Pay 
               </button>
             </div>
@@ -94,4 +113,4 @@ const Cart=()=>{
     )
 }
 
-export default Cart 
+export default Cart
