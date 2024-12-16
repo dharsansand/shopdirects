@@ -25,7 +25,7 @@ const Home = async () => {
      {console.log(bannerData)}
       <div className="products-heading">
     <h2>Best Seller Products</h2>
-    <p>speaker There are many variations passages</p>
+    <p>Boost your productivity with the latest laptops offering powerful performance, sleek designs, and cutting-edge features.</p>
   </div>
      
 

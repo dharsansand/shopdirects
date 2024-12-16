@@ -1,13 +1,17 @@
 import React from 'react';
 import { AiFillInstagram, AiOutlineTwitter} from 'react-icons/ai';
+import { FaGithub } from "react-icons/fa";
+
+
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>2022 JSM Headphones All rights reserverd</p>
+      <p>2024 direct shop All rights reserverd</p>
       <p className="icons">
+      <FaGithub />
         <AiFillInstagram />
-        <AiOutlineTwitter />
+       
       </p>
     </div>
   )
