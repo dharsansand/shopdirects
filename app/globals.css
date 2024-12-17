@@ -147,7 +147,8 @@ width: 100%;
   background-color: #f02d34;
   color: white;
   border: none;
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-left: -35px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -187,6 +188,7 @@ flex-direction: column;
 .desc p{
   color: #5f5f5f;
   font-weight: 100;
+  margin-top: 10px;
 text-align: end;
 }
 .desc h5{
@@ -263,7 +265,7 @@ text-align: end;
 }
 
 .banner-desc .right h3 {
-  font-weight: 800;
+  font-weight: 400;
   font-size: 50px;
 }
 
