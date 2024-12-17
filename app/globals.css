@@ -814,13 +814,15 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
-
+.banner-desc button {
+    
+}
 }
 @media screen and (max-width: 400px) {
   .navbar-container {
     flex-direction: column;
     align-items: center;
-    margin:10px;
+    margin: 10px 0;
   }
 
   .marquee-text {
