@@ -148,7 +148,7 @@ width: 100%;
   color: white;
   border: none;
   margin-top: 10px;
-  margin-left: -35px;
+  margin-left: 15px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
@@ -190,6 +190,7 @@ flex-direction: column;
   font-weight: 100;
   margin-top: 10px;
 text-align: end;
+font-size: 12px;
 }
 .desc h5{
   margin-bottom: 12px;
@@ -282,7 +283,7 @@ text-align: end;
 @media screen and (max-width: 768px) {
   .footer-banner-container {
     padding: 60px 20px;
-    height: auto;
+    height: 600px;
     margin-top: 60px;
   }
 
@@ -682,14 +683,14 @@ margin-top: 160px;
     right: -6%;
   }
   .footer-banner-container{
-    height: 560px;
+    height: 600px;
     margin-top: 80px;
   }
   .footer-banner-image{
     width: 77%;
     left: 30%;
     top: 6%;
-    height: 56%
+    height: 70%
   }
   .banner-desc .left h3{
     font-weight: 900;
@@ -813,4 +814,118 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
+
+}
+@media screen and (max-width: 400px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    margin:10px;
+  }
+
+  .marquee-text {
+    font-size: 20px;
+    margin: 40px 0;
+  }
+
+  .hero-banner-container {
+    padding: 60px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-banner-container h1 {
+    font-size: 1.5em;
+    margin-left: 0;
+  }
+
+  .hero-banner-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-banner-image {
+    width: 250px;
+    height: 250px;
+    right: 10%;
+    top: 10%;
+  }
+
+  .desc {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+   
+  }
+
+
+  .products-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .product-card:hover {
+    transform: none;
+  }
+
+  .footer-banner-container {
+    padding: 40px 20px;
+    height: auto;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .footer-banner-image {
+    position: static;
+    width: 200px;
+    margin: 20px auto;
+  }
+
+  .banner-desc {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-desc .left h3,
+  .banner-desc .right h3 {
+    font-size: 24px;
+  }
+
+  .banner-desc .left p,
+  .banner-desc .right p {
+    font-size: 14px;
+  }
+
+  .cart-container {
+    width: 100%;
+  }
+
+  .product-detail-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .product-detail-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .small-images-container {
+    justify-content: center;
+  }
+
+  .maylike-products-container {
+    flex-direction: column;
+  }
+
+  .success,
+  .cancel {
+    width: 90%;
+    padding: 30px;
+    margin-top: 100px;
+  }
 }
